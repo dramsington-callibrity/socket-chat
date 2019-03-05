@@ -1,0 +1,25 @@
+version: "3.5"
+services:
+  app:
+    image: node:10.15-alpine
+    working_dir: /home/node/app
+    environment:
+      REACT_APP_ISSUER: ${REACT_APP_ISSUER}
+      REACT_APP_SECRET: ${REACT_APP_SECRET}
+    ports:
+    - "3000:3000"
+    volumes:
+    - "./app:/home/node/app"
+    entrypoint: ["npm", "run", "start"]
+  server:
+    image: zephinzer/golang-dev:latest
+    ports:
+    - "4000:4000"
+    environment:
+      ISSUER: ${ISSUER}
+      SECRET: ${SECRET}
+    user: ${UID}
+    entrypoint: ["start"]
+    volumes:
+    - "./server/.cache/pkg:/go/pkg"
+    - "./server:/go/src/app"

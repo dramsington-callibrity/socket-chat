@@ -1,0 +1,62 @@
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+input, textarea, select, button, label {
+  font: 500 14 'Nanum Gothic', sans-serif !important;
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 2em;
+}
+
+.container {
+  width: 90%;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.App-header {
+  display: block;
+  min-height: 100px;
+  line-height: 100px;
+  text-align: center;
+  padding-top: 10px
+}
+
+.App-title {
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  margin: 2px 5px
+}
+
+.sk-spinner {
+  margin: 20px 0;
+}
+
+.sk-spinner div {
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 80%
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 70%
+  }
+}

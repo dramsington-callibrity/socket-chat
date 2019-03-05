@@ -1,0 +1,11 @@
+.section-component {
+  padding: 20px 5px;
+}
+
+.title {
+  font-family: 'Nanum Gothic', cursive;
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 200;
+}

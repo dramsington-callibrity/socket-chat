@@ -1,0 +1,69 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "jest": true,
+    "mocha": true
+  },
+  "globals": {
+    "window": true,
+    "navigator": true,
+    "document": true,
+    "self": true
+  },
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "arrow-parens": ["error", "as-needed"],
+    "object-curly-spacing": ["error", "always"],
+    "space-infix-ops": "error",
+    "eqeqeq": ["error", "always"],
+    "eol-last": ["error", "always"],
+    "keyword-spacing": "error",
+    "space-before-blocks": ["error", "always"],
+    "space-in-parens": ["error", "never"],
+    "operator-linebreak": ["error", "after"],
+    "newline-before-return": "error",
+    "no-multi-spaces": "error",
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "max-len": [
+      "error", {
+        "code": 100,
+        "ignorePattern": "^\\s*(it|describe|expect)\\s*\\(",
+        "ignoreStrings": true,
+        "tabWidth": 2
+      }
+    ],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "semi": "error",
+    "import/no-extraneous-dependencies": false,
+    "import/prefer-default-export": false,
+    "react/display-name": false,
+    "react/jsx-key": false,
+    "react/jsx-curly-spacing": [
+      2, {
+        "when": "always",
+        "children": true
+      }
+    ],
+    "react/jsx-curly-brace-presence": [
+      true, {
+        "props": "never",
+        "children": "never"
+      }
+    ],
+    "react/jsx-closing-tag-location": true,
+    "react/jsx-space-before-closing": ["error", "always"],
+    "react/jsx-equals-spacing": ["error", "never"],
+    "react/jsx-indent-props": [2, 2],
+    "react/no-deprecated": false,
+    "import/no-named-as-default": false,
+    "import/no-webpack-loader-syntax": false,
+    "import/no-unresolved": "warn"
+  }
+}
